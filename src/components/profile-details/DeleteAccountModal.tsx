@@ -99,7 +99,7 @@ export default function DeleteAccountModal({
           type="button"
           onClick={handleDelete}
           disabled={isPending}
-          className={`w-full flex items-center justify-center px-4 h-[41.6px] rounded font-medium text-white bg-red-600 ${
+          className={`relative w-full flex items-center justify-center px-4 h-[41.6px] rounded font-medium text-white bg-red-600 ${
             isPending
               ? "pointer-events-none opacity-70"
               : "hover:bg-red-500 transition-colors"
@@ -109,7 +109,7 @@ export default function DeleteAccountModal({
           Delete
           {isPending && (
             <AiOutlineLoading3Quarters
-              className="w-4 h-4 animate-spin ml-2"
+              className="absolute right-4 w-4 h-4 animate-spin ml-2"
               aria-hidden="true"
             />
           )}
