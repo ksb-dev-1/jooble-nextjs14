@@ -34,6 +34,7 @@ export default function Details({ job, userId }: JobDetailsProps) {
           userId={userId}
           jobId={job.id}
           applicationStatus={job?.applicationStatus}
+          updatedAt={job.updatedAt}
         />
       )}
 

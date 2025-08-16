@@ -13,7 +13,7 @@ import { checkIsResumeUploadedServerAction } from "@/actions/check-is-resume-upl
 
 // 3rd party
 import { useQuery } from "@tanstack/react-query";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { MdOutlineClose } from "react-icons/md";
 
 interface ApplyForJobModalProps {
   userId: string;
@@ -51,42 +51,45 @@ export default function ApplyForJobModal({
   }, [isOpen]);
 
   return (
-    <Modal
-      isOpen={isOpen}
-      setIsOpen={setIsOpen}
-      ref={modalRef}
-      labelledById="apply-modal-title"
-    >
-      <div role="document">
-        <h2 id="apply-modal-title" className="sr-only">
-          Apply for a job modal
-        </h2>
-
-        {isLoading ? (
-          <div className="flex items-center justify-center py-8">
-            <AiOutlineLoading3Quarters className="animate-spin mr-3" />
-            <span>Checking your resume...</span>
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen} ref={modalRef}>
+      {isLoading ? (
+        <div className="">
+          <div className="flex items-center justify-between mb-4">
+            <p className="skeleton w-40 h-6 rounded" />
+            <button
+              onClick={() => setIsOpen(false)}
+              type="button"
+              aria-label="Close apply panel"
+              className="p-1 rounded hover:bg-muted"
+            >
+              <MdOutlineClose className="h-5 w-5" aria-hidden="true" />
+            </button>
           </div>
-        ) : showUploadResume ? (
-          <UploadResume
-            isResumeUploaded={data?.success || false}
-            setShowUploadResume={setShowUploadResume}
-            userId={userId}
-            refetch={refetch}
-            setResumeUrl={setResumeUrl}
-          />
-        ) : data?.success ? (
-          <ResumeActions
-            userId={userId}
-            jobId={jobId}
-            resumeUrl={resumeUrl}
-            setIsOpen={setIsOpen}
-            setShowUploadResume={setShowUploadResume}
-          />
-        ) : (
-          <ResumeMissingPrompt setShowUploadResume={setShowUploadResume} />
-        )}
-      </div>
+          <div className="flex flex-col gap-3 border p-4 rounded">
+            <p className="skeleton w-full h-6 rounded" />
+            <p className="skeleton w-full h-6 rounded" />
+            <p className="skeleton w-40 h-6 rounded" />
+          </div>
+        </div>
+      ) : showUploadResume ? (
+        <UploadResume
+          isResumeUploaded={data?.success || false}
+          setShowUploadResume={setShowUploadResume}
+          userId={userId}
+          refetch={refetch}
+          setResumeUrl={setResumeUrl}
+        />
+      ) : data?.success ? (
+        <ResumeActions
+          userId={userId}
+          jobId={jobId}
+          resumeUrl={resumeUrl}
+          setIsOpen={setIsOpen}
+          setShowUploadResume={setShowUploadResume}
+        />
+      ) : (
+        <ResumeMissingPrompt setShowUploadResume={setShowUploadResume} />
+      )}
     </Modal>
   );
 }

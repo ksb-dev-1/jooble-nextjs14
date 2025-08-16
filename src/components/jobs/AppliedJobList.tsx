@@ -30,15 +30,10 @@ export default async function AppliedJobList({ userId }: AppliedJobListProps) {
   // Covers both null API response and empty jobs array
   if (!data || data.jobs.length === 0) {
     return (
-      <div
-        role="status"
-        aria-live="polite"
-        aria-labelledby="no-applied-jobs-heading"
-        className="w-full flex flex-col items-center justify-center border border-borderColor rounded px-4 py-16 sm:py-32 gap-8"
-      >
+      <div className="w-full flex flex-col items-center justify-center border border-borderColor rounded px-4 py-16 sm:py-32 gap-8">
         <DocumentSearchIcon />
         <div className="flex flex-col items-center justify-center gap-2">
-          <h2 id="no-applied-jobs-heading" className="font-medium text-lg">
+          <h2 className="font-medium text-lg">
             You haven&apos;t applied to any jobs yet!
           </h2>
           <p className="text-muted-foreground text-sm text-center">

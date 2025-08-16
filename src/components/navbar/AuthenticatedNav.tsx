@@ -36,8 +36,6 @@ const AuthenticatedNav = forwardRef<HTMLDivElement, AuthenticatedNavProps>(
                 onClick={() => setIsSideNavOpen((prev) => !prev)}
                 className="md:hidden border p-2 rounded mr-4 cursor-pointer hover:bg-dark dark:hover:bg-light transition-colors"
                 aria-label="Open menu"
-                aria-expanded={isSideNavOpen}
-                aria-controls="side-navigation"
               >
                 <MdMenu className="h-5 w-5" aria-hidden="true" />
               </button>
@@ -58,7 +56,6 @@ const AuthenticatedNav = forwardRef<HTMLDivElement, AuthenticatedNavProps>(
                     key={link.href}
                     linkPath={link.href}
                     matchPath={link.matchPath}
-                    //text={link.text}
                     icon={link.icon}
                   />
                 ))}

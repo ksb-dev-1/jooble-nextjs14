@@ -71,12 +71,7 @@ export default function ResumeActions({
     <section aria-labelledby="resume-actions-title">
       {/* Header with Close Button */}
       <header className="flex items-center justify-between">
-        <h1
-          id="resume-actions-title"
-          className="text-lg sm:text-xl font-bold"
-          role="heading"
-          aria-level={1}
-        >
+        <h1 className="text-lg sm:text-xl font-bold" aria-level={1}>
           Apply for Job
         </h1>
 

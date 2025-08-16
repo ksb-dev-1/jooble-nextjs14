@@ -13,10 +13,7 @@ export default function GoogleSignInButton() {
     <button
       type="submit"
       disabled={pending}
-      aria-disabled={pending}
-      aria-busy={pending}
       aria-label="Sign in with Google"
-      title="Sign in with Google"
       className={`relative w-full border rounded-full p-4 flex items-center justify-center transition-colors 
         ${
           pending

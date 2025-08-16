@@ -10,7 +10,6 @@ export default function WarningCard({
 }) {
   return (
     <div
-      role="alert"
       className={`relative rounded bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-400 overflow-hidden ${className}`}
     >
       <div className="absolute top-0 left-0 bottom-0 bg-amber-700 text-white dark:bg-amber-500 dark:text-amber-950 w-8">

@@ -23,41 +23,18 @@ export default async function SignInPage() {
   if (session?.user?.id) redirect("/jobs?page=1");
 
   return (
-    <main
-      className="h-[calc(100vh-57px)] flex flex-col items-center justify-center px-4"
-      role="main"
-      aria-label="Sign in to Jooble"
-    >
+    <main className="h-screen flex flex-col items-center justify-center px-4">
       <section className="max-w-xl w-full mx-auto border rounded p-4 sm:p-8">
         <h1 className="font-extrabold text-xl md:text-2xl mb-8 text-center">
           Sign in to <span className="text-primary">Jooble</span>
         </h1>
 
-        <fieldset
-          className="flex flex-col gap-4"
-          aria-labelledby="sign-in-options"
-        >
-          <legend id="sign-in-options" className="sr-only">
-            Choose a sign-in method
-          </legend>
-
-          <form
-            action={googleSigninServerAction}
-            aria-describedby="google-desc"
-          >
-            <span id="google-desc" className="sr-only">
-              Sign in with Google
-            </span>
+        <fieldset className="flex flex-col gap-4">
+          <form action={googleSigninServerAction}>
             <GoogleSignInButton />
           </form>
 
-          <form
-            action={githubSigninServerAction}
-            aria-describedby="github-desc"
-          >
-            <span id="github-desc" className="sr-only">
-              Sign in with GitHub
-            </span>
+          <form action={githubSigninServerAction}>
             <GitHubSignInButton />
           </form>
         </fieldset>

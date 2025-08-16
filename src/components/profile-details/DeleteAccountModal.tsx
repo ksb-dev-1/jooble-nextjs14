@@ -55,21 +55,9 @@ export default function DeleteAccountModal({
   };
 
   return (
-    <Modal
-      isOpen={isOpen}
-      setIsOpen={setIsOpen}
-      ref={modalRef}
-      labelledById="modal-title"
-    >
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen} ref={modalRef}>
       <header className="flex items-center justify-between">
-        <h1
-          id="modal-title"
-          className="text-lg sm:text-xl font-extrabold"
-          role="heading"
-          aria-level={1}
-        >
-          Delete Account
-        </h1>
+        <h1 className="text-lg sm:text-xl font-extrabold">Delete Account</h1>
         <button
           type="button"
           onClick={() => setIsOpen(false)}
@@ -80,11 +68,8 @@ export default function DeleteAccountModal({
         </button>
       </header>
 
-      <section
-        aria-describedby="modal-description"
-        className="my-4 border-t pt-4"
-      >
-        <p id="modal-description" className="font-semibold text-lg text-center">
+      <section className="my-4 border-t pt-4">
+        <p className="font-semibold text-lg text-center">
           Do you want to delete your account?
         </p>
 
@@ -99,6 +84,7 @@ export default function DeleteAccountModal({
           type="button"
           onClick={handleDelete}
           disabled={isPending}
+          aria-label="Delete account"
           className={`relative w-full flex items-center justify-center px-4 h-[41.6px] rounded font-medium text-white bg-red-600 ${
             isPending
               ? "pointer-events-none opacity-70"
@@ -116,13 +102,7 @@ export default function DeleteAccountModal({
         </button>
 
         {errorMsg && (
-          <p
-            className="mt-4 text-sm text-center text-red-600"
-            role="alert"
-            aria-live="assertive"
-          >
-            {errorMsg}
-          </p>
+          <p className="mt-4 text-sm text-center text-red-600">{errorMsg}</p>
         )}
       </footer>
     </Modal>

@@ -33,11 +33,7 @@ export default function Pagination({
   };
 
   return (
-    <nav
-      className="flex items-center justify-between gap-4"
-      role="navigation"
-      aria-label="Pagination Navigation"
-    >
+    <nav className="flex items-center justify-between gap-4">
       <button
         onClick={() => updatePage(currentPage - 1)}
         disabled={currentPage <= 1}
@@ -66,8 +62,7 @@ export default function Pagination({
           value={inputPage}
           onChange={(e) => setInputPage(e.target.value)}
           className="min-w-24 px-4 py-2 bg-light dark:bg-dark border rounded text-center focus:outline-none focus:ring-1 focus:ring-primary focus:border-transparent"
-          //placeholder="Jump to"
-          aria-label="Enter page number to jump"
+          placeholder="Jump to"
         />
         <button
           type="submit"

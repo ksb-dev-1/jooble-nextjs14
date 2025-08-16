@@ -110,7 +110,6 @@ export default function FAQ() {
   return (
     <div className="max-w-5xl mx-auto px-4">
       <motion.h2
-        id="faq-heading"
         className="text-xl md:text-2xl font-extrabold mb-8"
         initial="hidden"
         whileInView="show"
@@ -134,11 +133,7 @@ export default function FAQ() {
         </motion.span>
       </motion.h2>
 
-      <div
-        className="divide-y divide-borderColor"
-        role="region"
-        aria-labelledby="faq-heading"
-      >
+      <div className="divide-y divide-borderColor">
         {faqs.map((faq, index) => (
           <FAQItem
             key={index}

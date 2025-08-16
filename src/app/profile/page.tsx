@@ -45,15 +45,12 @@ export default async function ProfilePage() {
 
   return (
     <Container>
-      <nav aria-label="Breadcrumb" className="mb-8">
+      <nav className="mb-8">
         <Breadcrumb items={breadcrumbItems} />
       </nav>
 
-      <main role="main">
-        <section className="w-full" aria-labelledby="profile-details">
-          <h2 id="profile-details" className="sr-only">
-            Profile Details
-          </h2>
+      <main>
+        <section className="w-full">
           <ProfileDetails
             userId={userId}
             image={image}

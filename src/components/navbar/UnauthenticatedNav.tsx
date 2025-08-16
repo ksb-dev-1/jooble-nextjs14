@@ -22,11 +22,7 @@ const UnauthenticatedNav = forwardRef<HTMLDivElement, UnauthenticatedNavProps>(
         ref={ref}
         className="navbar-fixed fixed top-0 left-0 right-0 z-30 bg-light dark:bg-dark border-b w-full h-16 flex items-center justify-center"
       >
-        <nav
-          className="max-w-5xl w-full mx-auto px-4 flex items-center justify-between"
-          role="navigation"
-          aria-label="Unauthenticated main navigation"
-        >
+        <nav className="max-w-5xl w-full mx-auto px-4 flex items-center justify-between">
           <LinkWithProgress
             href="/"
             className={`${

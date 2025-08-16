@@ -27,16 +27,12 @@ export default async function SavedJobsPage() {
 
   return (
     <Container>
-      <nav aria-label="Breadcrumb" className="mb-8">
+      <nav className="mb-8">
         <Breadcrumb items={breadcrumbItems} />
       </nav>
 
-      <main className="w-full flex flex-col" role="main">
-        <section className="w-full" aria-labelledby="saved-job-results-heading">
-          <h2 id="saved-job-results-heading" className="sr-only">
-            Saved Jobs
-          </h2>
-
+      <main className="w-full flex flex-col">
+        <section className="w-full">
           <SavedJobList userId={userId} />
         </section>
       </main>

@@ -30,8 +30,6 @@ export default function SideNav({ isOpen, onClose, isHome }: SideNavProps) {
     >
       <nav
         ref={sideNavRef}
-        role="navigation"
-        aria-label="Mobile side navigation"
         className={`${
           isOpen ? "translate-x-0" : "-translate-x-[100%]"
         } transition-transform absolute top-0 left-0 bottom-0 w-52 bg-light dark:bg-dark border-r z-30`}

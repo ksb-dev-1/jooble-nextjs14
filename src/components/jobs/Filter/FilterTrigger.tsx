@@ -17,8 +17,7 @@ export default function FilterTrigger() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        aria-haspopup="dialog"
-        aria-expanded={isOpen}
+        aria-label="Open filter modal"
         className="relative w-fit flex items-center px-4 py-2 rounded border hover:bg-dark dark:hover:bg-light text-primary"
       >
         <FilterIcon className="mr-2" />

@@ -15,14 +15,10 @@ interface ModalProps {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
   maxWidth?: string;
-  labelledById?: string;
 }
 
 const Modal = forwardRef<HTMLDivElement, ModalProps>(
-  (
-    { children, isOpen, setIsOpen, maxWidth = "max-w-xl", labelledById },
-    ref
-  ) => {
+  ({ children, isOpen, setIsOpen, maxWidth = "max-w-xl" }, ref) => {
     useHandleOutsideClick(ref as React.RefObject<HTMLDivElement>, setIsOpen);
 
     // Handle ESC key to close modal
@@ -56,9 +52,6 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         } z-30 fixed inset-0 transition-opacity backdrop-blur-sm bg-modal flex items-center justify-center px-4`}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={labelledById}
       >
         <div
           ref={ref}

@@ -47,9 +47,6 @@ export default function UserProfile({ image }: UserProfileProps) {
         <div
           className="relative h-8 w-8 rounded-full cursor-pointer bg-dark dark:bg-light"
           onClick={toggleOpen}
-          role="button"
-          aria-label="Open profile menu"
-          tabIndex={0}
         >
           <UserIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text" />
         </div>
@@ -60,8 +57,6 @@ export default function UserProfile({ image }: UserProfileProps) {
             ? "translate-y-0 opacity-100 pointer-events-auto"
             : "translate-y-3 opacity-0 pointer-events-none"
         } origin-top-right absolute right-0 mt-2 rounded bg-light dark:bg-dark shadow-xl border p-2 flex flex-col w-max transition-all`}
-        role="menu"
-        aria-label="User menu"
       >
         <LinkWithProgress
           href="/profile"
@@ -69,7 +64,6 @@ export default function UserProfile({ image }: UserProfileProps) {
           className={`${
             isProfile ? "pointer-events-none" : ""
           } px-4 py-2 flex items-center hover:bg-dark dark:hover:bg-light transition-colors rounded`}
-          role="menuitem"
         >
           <UserIcon />
           <span className="ml-3">Profile</span>
@@ -80,7 +74,6 @@ export default function UserProfile({ image }: UserProfileProps) {
             toggleOpen();
           }}
           className="px-4 py-2 flex items-center hover:bg-dark dark:hover:bg-light transition-colors rounded"
-          role="menuitem"
         >
           <SignoutIcon />
           <span className="ml-3">Sign out</span>

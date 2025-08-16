@@ -12,25 +12,14 @@ const NavbarLoadingState = forwardRef<HTMLDivElement>((_, ref) => {
       ref={ref}
       className="navbar-fixed fixed top-0 left-0 right-0 z-30 bg-light dark:bg-dark border-b w-full h-16 flex items-center justify-center"
     >
-      <nav
-        role="navigation"
-        aria-label="Main navigation"
-        aria-busy="true"
-        className="max-w-5xl w-full mx-auto px-4 flex items-center justify-between"
-      >
+      <nav className="max-w-5xl w-full mx-auto px-4 flex items-center justify-between">
         <Link
           href="#"
           className="text-2xl font-extrabold text-primary pointer-events-none"
         >
           Careerly
         </Link>
-        {/* <div className="hidden md:flex items-center space-x-4">
-          {["Jobs", "Saved", "Applied"].map((label) => (
-            <div key={label} className="skeleton rounded w-20 py-[3px]">
-              {label}
-            </div>
-          ))}
-        </div> */}
+
         <div className="flex items-center space-x-4">
           <ThemeSwitch />
           <div className="skeleton h-8 w-8 rounded-full"></div>

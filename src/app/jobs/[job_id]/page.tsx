@@ -31,15 +31,11 @@ export default async function JobDetailsPage({
 
   return (
     <Container>
-      <nav aria-label="Breadcrumb" className="mb-8">
+      <nav className="mb-8">
         <Breadcrumb items={breadcrumbItems} />
       </nav>
 
-      <main className="w-full" role="main">
-        <h1 id="job-details-heading" className="sr-only">
-          Job Details
-        </h1>
-
+      <main className="w-full">
         <JobDetails params={params} userId={userId} />
       </main>
     </Container>

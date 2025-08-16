@@ -17,7 +17,6 @@ export function ApplyFiltersButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      aria-disabled={disabled}
       aria-label="Apply selected filters"
       className={clsx(
         "btn-primary relative",

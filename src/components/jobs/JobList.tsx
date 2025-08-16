@@ -17,11 +17,7 @@ export default async function JobList({
   // 🟥 CASE 1: No jobs + Filters applied
   if (jobs.length === 0 && hasActiveFilters) {
     return (
-      <div
-        role="alert"
-        aria-live="assertive"
-        className="w-full flex flex-col items-center justify-center border rounded px-4 py-16 sm:py-32"
-      >
+      <div className="w-full flex flex-col items-center justify-center border rounded px-4 py-16 sm:py-32">
         <DocumentSearchIcon />
         <h2 className="mt-8 font-semibold text-xl">
           No jobs match your filters!
@@ -36,11 +32,7 @@ export default async function JobList({
   // 🟦 CASE 2: No jobs + No filters
   if (jobs.length === 0 && !hasActiveFilters) {
     return (
-      <div
-        role="status"
-        aria-live="polite"
-        className="w-full flex flex-col items-center justify-center border border-borderColor rounded px-4 py-16 sm:py-32"
-      >
+      <div className="w-full flex flex-col items-center justify-center border border-borderColor rounded px-4 py-16 sm:py-32">
         <DocumentSearchIcon />
         <h2 className="mt-8 font-semibold text-xl">No jobs available yet</h2>
         <p className="mt-1">

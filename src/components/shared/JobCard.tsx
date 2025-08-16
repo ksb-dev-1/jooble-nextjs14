@@ -57,10 +57,7 @@ export default function JobCard({
   } = job;
 
   return (
-    <article
-      className="relative h-full"
-      aria-label={`Job posting: ${role} at ${companyName}`}
-    >
+    <article className="relative h-full">
       <LinkWithProgress
         href={link ?? `/jobs/${id}`}
         className={`${
@@ -89,28 +86,23 @@ export default function JobCard({
           <dl className="flex flex-wrap gap-x-8 gap-y-4 text-text_secondary">
             <div className="flex items-center">
               <BriefcaseIcon />
-              <dt className="sr-only">Experience</dt>
-              <dd className="ml-2">{experience}</dd>
+              <span className="ml-2">{experience}</span>
             </div>
             <div className="flex items-center">
               <LocationIcon />
-              <dt className="sr-only">Location</dt>
-              <dd className="ml-1">{location}</dd>
+              <span className="ml-1">{location}</span>
             </div>
             <div className="flex items-center">
               <TimerIcon />
-              <dt className="sr-only">Job Type</dt>
-              <dd className="ml-2">{jobType}</dd>
+              <span className="ml-2">{jobType}</span>
             </div>
             <div className="flex items-center">
               <OfficeIcon />
-              <dt className="sr-only">Job Mode</dt>
-              <dd className="ml-2">{jobMode}</dd>
+              <span className="ml-2">{jobMode}</span>
             </div>
             <div className="flex items-center">
               <RupeeIcon />
-              <dt className="sr-only">Salary</dt>
-              <dd className="ml-1">{formatMoney(salary).slice(1)}</dd>
+              <span className="ml-1">{formatMoney(salary).slice(1)}</span>
             </div>
           </dl>
 
@@ -122,12 +114,6 @@ export default function JobCard({
                     <span className="capitalize text-text_secondary text-xs border rounded px-2 py-[2px]">
                       {skill}
                     </span>
-                    {/* {index !== skills.length - 1 && (
-                      <span
-                        className="h-1 w-1 mx-2 rounded-full inline-block bg-[#555]"
-                        aria-hidden="true"
-                      ></span>
-                    )} */}
                   </div>
                 ))}
               </div>

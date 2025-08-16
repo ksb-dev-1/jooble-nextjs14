@@ -53,12 +53,7 @@ export function FilterContent({
   const config = optionsMap[activeTab as keyof typeof optionsMap];
 
   return (
-    <div
-      id={`tabpanel-${activeTab}`}
-      role="tabpanel"
-      aria-labelledby={`tab-${activeTab}`}
-      className="h-full p-4 md:p-8"
-    >
+    <div className="h-full p-4 md:p-8">
       <MultiSelectFilter
         placeholder={config.placeholder}
         options={config.options}

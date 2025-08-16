@@ -24,14 +24,8 @@ export default function FilterModal({ isOpen, setIsOpen }: FilterModalProps) {
       isOpen={isOpen}
       setIsOpen={setIsOpen}
       maxWidth="max-w-2xl"
-      labelledById="filter-modal-title"
     >
-      <div role="document" className="outline-none">
-        {/* This heading is only for screen readers */}
-        <h2 id="filter-modal-title" className="sr-only">
-          Job Filters Modal
-        </h2>
-
+      <div className="outline-none">
         <Filters isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </Modal>

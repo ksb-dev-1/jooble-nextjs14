@@ -139,11 +139,7 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
         <div className="w-full flex flex-col mt-8">
           <JobList jobs={jobs} hasActiveFilters={hasActiveFilters} />
           {totalPages > 1 && (
-            <nav
-              role="navigation"
-              aria-label="Pagination navigation"
-              className="w-full mt-16"
-            >
+            <nav className="w-full mt-16">
               <Pagination currentPage={currentPage} totalPages={totalPages} />
             </nav>
           )}

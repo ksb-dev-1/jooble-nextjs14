@@ -48,13 +48,8 @@ const features = [
 
 export default function FeatureSection() {
   return (
-    <section
-      className="max-w-5xl px-4 mx-auto"
-      role="region"
-      aria-labelledby="features-heading"
-    >
+    <section className="max-w-5xl px-4 mx-auto">
       <motion.h2
-        id="features-heading"
         className="text-xl md:text-2xl font-extrabold mb-8"
         initial="hidden"
         whileInView="show"
@@ -83,7 +78,6 @@ export default function FeatureSection() {
           <motion.article
             key={index}
             className="p-4 sm:p-6 border rounded bg-light dark:bg-dark"
-            aria-label={`${feature.title}: ${feature.desc}`}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}

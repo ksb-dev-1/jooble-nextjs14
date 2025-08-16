@@ -18,16 +18,12 @@ type BreadcrumbProps = {
 
 export default function Breadcrumb({ items, className }: BreadcrumbProps) {
   return (
-    <nav
-      className={`flex items-center gap-2 font-semibold ${className ?? ""}`}
-      aria-label="Breadcrumb"
-    >
+    <nav className={`flex items-center gap-2 font-semibold ${className ?? ""}`}>
       <ol className="flex items-center gap-2" role="list">
         {items.map((item, index) => (
           <li
             key={item.href || item.label || index}
             className="flex items-center gap-3"
-            role="listitem"
           >
             {item.href ? (
               <LinkWithProgress

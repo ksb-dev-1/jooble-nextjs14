@@ -17,6 +17,7 @@ import {
   FaSignInAlt,
   FaSignOutAlt,
   FaLightbulb,
+  FaCalendarCheck,
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 
@@ -49,3 +50,4 @@ export const UserIcon = createIconComponent(FaUser);
 export const SigninIcon = createIconComponent(FaSignInAlt);
 export const SignoutIcon = createIconComponent(FaSignOutAlt);
 export const SkillsIcon = createIconComponent(FaLightbulb);
+export const CalenderCheckIcon = createIconComponent(FaCalendarCheck);

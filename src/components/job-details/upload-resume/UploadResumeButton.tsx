@@ -20,8 +20,6 @@ export default function UploadResumeButton({
       type="button"
       onClick={onClick}
       disabled={disabled || isPending}
-      aria-busy={isPending}
-      aria-disabled={disabled}
       aria-label="Upload resume"
       className={clsx(
         "btn-primary relative",

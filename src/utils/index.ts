@@ -1,4 +1,4 @@
-import { formatDistanceToNowStrict } from "date-fns";
+import { formatDistanceToNowStrict, format } from "date-fns";
 
 export function formatMoney(amount: number) {
   return new Intl.NumberFormat("en-IN", {
@@ -11,6 +11,10 @@ export function formatMoney(amount: number) {
 
 export function relativeDate(from: Date) {
   return formatDistanceToNowStrict(from, { addSuffix: true });
+}
+
+export function monthYearDate(from: Date) {
+  return format(from, "dd MMM yyyy");
 }
 
 export function parseUniqueFilters(str?: string): string[] {

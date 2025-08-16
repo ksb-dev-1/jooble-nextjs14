@@ -78,17 +78,10 @@ export default function Filters({ isOpen, setIsOpen }: FiltersProps) {
   return (
     <>
       {/* Header: Title, Description, Close & Clear */}
-      <header id="filters-heading">
+      <header>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <h1
-              className="text-lg sm:text-xl font-bold"
-              id="filters-title"
-              role="heading"
-              aria-level={1}
-            >
-              Filters
-            </h1>
+            <h1 className="text-lg sm:text-xl font-bold">Filters</h1>
             {isFilterSelected > 0 && (
               <div className="flex items-center">
                 <p className="border-l-2 h-5 mx-4"></p>
@@ -116,11 +109,7 @@ export default function Filters({ isOpen, setIsOpen }: FiltersProps) {
       </header>
 
       {/* Filter Tabs + Panels */}
-      <section
-        className="flex flex-col border rounded my-4"
-        aria-labelledby="filters-heading"
-        aria-describedby="filters-description"
-      >
+      <section className="flex flex-col border rounded my-4">
         <FilterTabs
           activeTab={activeTab}
           setActiveTab={setActiveTab}

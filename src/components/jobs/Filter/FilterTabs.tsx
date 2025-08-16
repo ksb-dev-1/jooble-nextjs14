@@ -31,11 +31,7 @@ export function FilterTabs({
   ];
 
   return (
-    <div
-      role="tablist"
-      aria-label="Filter categories"
-      className="w-full grid grid-cols-3 border-b"
-    >
+    <div className="w-full grid grid-cols-3 border-b">
       {tabs.map(({ id, label, icon }, index) => {
         const isActive = activeTab === id;
         return (
@@ -44,8 +40,7 @@ export function FilterTabs({
             id={`tab-${id}`}
             role="tab"
             type="button"
-            aria-selected={isActive}
-            aria-controls={`tabpanel-${id}`}
+            aria-label="filter tab"
             onClick={() => setActiveTab(id)}
             className={`${
               index === 1 ? "border-x" : ""

@@ -36,17 +36,11 @@ export default async function JobDetails({ params, userId }: JobDetailsProps) {
     return <ServerError />;
   }
 
-  const { id, description, applicationStatus } = data;
+  const { id, description, applicationStatus, updatedAt } = data;
 
   return (
-    <article
-      aria-labelledby="job-detail-heading"
-      className="w-full flex flex-col"
-    >
+    <article className="w-full flex flex-col">
       <header>
-        <h2 id="job-detail-heading" className="sr-only">
-          Job Overview
-        </h2>
         <JobCard
           key={id}
           job={data}
@@ -59,13 +53,11 @@ export default async function JobDetails({ params, userId }: JobDetailsProps) {
         userId={userId}
         jobId={id}
         applicationStatus={applicationStatus}
+        updatedAt={updatedAt}
       />
 
       {description && (
-        <section aria-labelledby="job-description-heading" className="mt-8">
-          <h3 id="job-description-heading" className="sr-only">
-            Job Description
-          </h3>
+        <section className="mt-8">
           <Markdown>{description}</Markdown>
         </section>
       )}

@@ -13,7 +13,6 @@ export default function ThemeSwitch() {
       className="relative h-8 w-8 rounded-full hover:bg-dark dark:hover:bg-light"
       type="button"
       aria-label={isLight ? "Activate dark mode" : "Activate light mode"}
-      title={isLight ? "Switch to dark mode" : "Switch to light mode"}
     >
       {isLight ? (
         <MoonIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />

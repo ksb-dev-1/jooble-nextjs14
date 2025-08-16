@@ -13,10 +13,7 @@ export default function GitHubSignInButton() {
     <button
       type="submit"
       disabled={pending}
-      aria-disabled={pending}
-      aria-busy={pending}
       aria-label="Sign in with GitHub"
-      title="Sign in with GitHub"
       className={`relative w-full border rounded-full p-4 flex items-center justify-center transition-colors ${
         pending
           ? "pointer-events-none opacity-70"

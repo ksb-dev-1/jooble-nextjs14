@@ -6,14 +6,9 @@ import Image from "next/image";
 // actions
 import { checkIsResumeUploadedServerAction } from "@/actions/check-is-resume-uploaded-server-action";
 
-//import dynamic from "next/dynamic";
-
 // components
 import LinkWithProgress from "@/components/shared/LinkWithProgress";
 import DeleteAccountModal from "./DeleteAccountModal";
-// const DeleteAccountModal = dynamic(() => import("./DeleteAccountModal"), {
-//   ssr: false,
-// });
 
 // 3rd party
 import { FaRegUser } from "react-icons/fa";
@@ -58,14 +53,9 @@ export default function ProfileDetails({
   return (
     <div>
       {/* Profile Header */}
-      <section
-        aria-labelledby="profile-heading"
-        className="relative rounded overflow-hidden"
-      >
+      <section className="relative rounded overflow-hidden">
         <div className="p-4 md:p-6 border flex flex-col gap-4 rounded">
-          <h1 id="profile-heading" className="sr-only">
-            User Profile Details
-          </h1>
+          <h1 className="sr-only">User Profile Details</h1>
           {image ? (
             <Image
               src={image}
@@ -77,11 +67,7 @@ export default function ProfileDetails({
               className="rounded"
             />
           ) : (
-            <div
-              className="relative h-[100px] w-[100px] rounded bg-slate-300"
-              role="img"
-              aria-label="User avatar placeholder"
-            >
+            <div className="relative h-[100px] w-[100px] rounded bg-slate-300">
               <FaRegUser className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl text-white" />
             </div>
           )}
@@ -112,17 +98,14 @@ export default function ProfileDetails({
         <button
           onClick={() => setIsOpen(true)}
           className="absolute top-0 right-0 bg-red-600 text-white hover:bg-red-500 transition-colors h-8 w-8 rounded-tr rounded-bl flex items-center justify-center"
-          aria-label="Delete account"
+          aria-label="Open delete account modal"
         >
           <MdOutlineDelete className="h-5 w-5" />
         </button>
       </section>
 
       {/* Saved & Applied Job Links */}
-      <section
-        className="mt-4 grid sm:grid-cols-2 gap-4"
-        aria-label="User job statistics"
-      >
+      <section className="mt-4 grid sm:grid-cols-2 gap-4">
         <LinkWithProgress
           href="/jobs/saved"
           className="px-4 py-2 rounded border flex items-center justify-between hover:bg-dark dark:hover:bg-light transition-colors"
@@ -130,11 +113,7 @@ export default function ProfileDetails({
         >
           <p className="flex items-center">
             <span className="font-semibold">Saved Jobs</span>
-            <span
-              className="ml-4 relative inline-block h-6 w-6 rounded-full border border-gray-400 dark:border-gray-500 text-primary"
-              aria-live="polite"
-              aria-label="Saved jobs count"
-            >
+            <span className="ml-4 relative inline-block h-6 w-6 rounded-full border border-gray-400 dark:border-gray-500 text-primary">
               <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm font-semibold">
                 {savedJobsLength ?? 0}
               </span>
@@ -150,11 +129,7 @@ export default function ProfileDetails({
         >
           <p className="flex items-center">
             <span className="font-semibold">Applied Jobs</span>
-            <span
-              className="ml-4 relative inline-block h-6 w-6 rounded-full border border-gray-400 dark:border-gray-500 text-primary"
-              aria-live="polite"
-              aria-label="Applied jobs count"
-            >
+            <span className="ml-4 relative inline-block h-6 w-6 rounded-full border border-gray-400 dark:border-gray-500 text-primary">
               <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm font-semibold">
                 {appliedJobsLength ?? 0}
               </span>

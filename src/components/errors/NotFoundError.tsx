@@ -10,12 +10,7 @@ export default function NotFoundError({
   message = "The requested content was not found.",
 }: NotFoundErrorProps) {
   return (
-    <div
-      role="status"
-      aria-live="polite"
-      aria-labelledby="not-found-heading"
-      className="w-full flex flex-col items-center justify-center gap-6"
-    >
+    <div className="w-full flex flex-col items-center justify-center gap-6">
       {/* Title */}
       <p className="font-bold text-2xl text-red-400">{title}</p>
 
@@ -38,9 +33,7 @@ export default function NotFoundError({
 
       {/* Message */}
       <div className="flex flex-col items-center justify-center gap-2 text-center">
-        <h2 id="not-found-heading" className="font-bold text-xl">
-          {message}
-        </h2>
+        <h2 className="font-bold text-xl">{message}</h2>
         <p className="text-gray-500 dark:text-gray-400 text-sm">
           Please check the URL or try again later.
         </p>

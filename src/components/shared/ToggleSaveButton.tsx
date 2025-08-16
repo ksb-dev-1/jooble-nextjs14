@@ -7,7 +7,6 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 function IconButton({
   children,
   label,
-  pressed,
 }: {
   children: React.ReactNode;
   label: string;
@@ -17,7 +16,6 @@ function IconButton({
     <button
       type="submit"
       aria-label={label}
-      aria-pressed={pressed}
       title={label}
       className="flex items-center justify-center rounded-full h-8 w-8 hover:bg-dark dark:hover:bg-light"
     >
