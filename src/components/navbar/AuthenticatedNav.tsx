@@ -56,6 +56,7 @@ const AuthenticatedNav = forwardRef<HTMLDivElement, AuthenticatedNavProps>(
                     key={link.href}
                     linkPath={link.href}
                     matchPath={link.matchPath}
+                    text={link.text}
                     icon={link.icon}
                   />
                 ))}

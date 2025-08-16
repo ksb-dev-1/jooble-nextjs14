@@ -24,7 +24,7 @@ export const fetchSavedJobsCount = async (
       [`saved-jobs-count-user-${userId}`],
       {
         tags: [`saved-jobs-count-user-${userId}`],
-        revalidate: 3600,
+        revalidate: 300,
       }
     );
 

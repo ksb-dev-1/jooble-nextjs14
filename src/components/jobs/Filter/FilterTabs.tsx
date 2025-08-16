@@ -38,7 +38,6 @@ export function FilterTabs({
           <button
             key={id}
             id={`tab-${id}`}
-            role="tab"
             type="button"
             aria-label="filter tab"
             onClick={() => setActiveTab(id)}

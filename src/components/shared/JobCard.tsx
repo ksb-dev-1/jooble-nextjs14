@@ -65,7 +65,7 @@ export default function JobCard({
         } h-full block bg-light dark:bg-dark border rounded p-4 sm:p-6 hover:shadow-card transition-shadow ${pointerEventsClass}`}
       >
         <header>
-          <h3 className="font-extrabold text-lg mb-1">{role}</h3>
+          <h2 className="font-extrabold text-lg mb-1">{role}</h2>
           <p>
             <span className="text-primary font-bold">{companyName}</span>
             {applicationStatus && (
@@ -83,7 +83,7 @@ export default function JobCard({
         </header>
 
         <section className="mt-6" aria-label="Job details">
-          <dl className="flex flex-wrap gap-x-8 gap-y-4 text-text_secondary">
+          <div className="flex flex-wrap gap-x-8 gap-y-4 text-text_secondary">
             <div className="flex items-center">
               <BriefcaseIcon />
               <span className="ml-2">{experience}</span>
@@ -104,7 +104,7 @@ export default function JobCard({
               <RupeeIcon />
               <span className="ml-1">{formatMoney(salary).slice(1)}</span>
             </div>
-          </dl>
+          </div>
 
           <div className="flex items-end flex-wrap">
             {skills?.length > 0 && (

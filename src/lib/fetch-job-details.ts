@@ -55,7 +55,7 @@ export const fetchJobDetails = async (
       [`job-details-${userId}-${jobId}`],
       {
         tags: [`job-details-${userId}-${jobId}`],
-        revalidate: 3600,
+        revalidate: 300,
       }
     );
 

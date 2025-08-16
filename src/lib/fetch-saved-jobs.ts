@@ -47,7 +47,7 @@ export const fetchSavedJobs = async (userId: string): Promise<Jobs | null> => {
       [`saved-jobs-user-${userId}`],
       {
         tags: [`saved-jobs-user-${userId}`],
-        revalidate: 3600,
+        revalidate: 300,
       }
     );
 

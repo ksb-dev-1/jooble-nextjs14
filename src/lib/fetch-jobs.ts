@@ -111,7 +111,7 @@ const cachedFetchPublicJobs = (params: BaseParams & { userId: string }) => {
   const cacheKey = [`public-jobs-${JSON.stringify(params)}`];
 
   return unstable_cache(() => _fetchPublicJobsFromDB(params), cacheKey, {
-    revalidate: 3600,
+    revalidate: 300,
     tags: [`jobs-user-${params.userId}`], // ✅ Add tag
   })();
 };
