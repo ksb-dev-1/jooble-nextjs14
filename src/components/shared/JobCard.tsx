@@ -62,7 +62,7 @@ export default function JobCard({
         href={link ?? `/jobs/${id}`}
         className={`${
           id === currentJob?.id ? "border-primary" : ""
-        } h-full block bg-light dark:bg-dark border rounded p-4 sm:p-6 hover:border-primary ${pointerEventsClass}`}
+        } h-full block bg-light dark:bg-dark border rounded p-4 sm:p-6 hover:shadow-card transition-shadow ${pointerEventsClass}`}
       >
         <header>
           <h3 className="font-extrabold text-lg mb-1">{role}</h3>

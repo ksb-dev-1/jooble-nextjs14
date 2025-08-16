@@ -12,7 +12,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ...colors,
+        slate: colors.slate,
+        gray: colors.gray,
+        zinc: colors.zinc,
+        neutral: colors.neutral,
+        stone: colors.stone,
+        sky: colors.sky,
+        emerald: colors.emerald,
+        red: colors.red,
+        yellow: colors.yellow,
+        indigo: colors.indigo,
+        violet: colors.violet,
+
         primary: "var(--primary)",
         light: "var(--light)",
         dark: "var(--dark)",
